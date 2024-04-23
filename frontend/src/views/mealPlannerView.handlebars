@@ -1,0 +1,58 @@
+<div class="mx-5">
+    <h2 class="text-center mt-5">Meal Planner</h2>
+    {{#if mealPlannerResult}}
+    <p class="text-center mb-5">Here is your meal planner based on the selected criteria.</p>
+    {{else}}
+    <p class="text-center mb-5">There are no meal plans available based on the selected criteria.</p>
+    {{/if}}
+
+    {{#if mealPlannerResult.week}}
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {{#each mealPlannerResult.week}}
+        <div class="col">
+            <div class="card text-center mx-3 mb-5 h-100" style="width: 18rem;">
+                <div class="card-header">
+                    {{@key}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Meals</h5>
+                    <ul class="list-group list-group-flush">
+                        {{#each this.meals}}
+                        <li class="list-group-item">
+                            <a href="/recipe-details/{{id}}">{{this.title}}</a>
+                            <p>Ready in: {{this.readyInMinutes}} minutes</p>
+                            <p>Servings: {{this.servings}}</p>
+                        </li>
+                        {{/each}}
+                        <p>Total Calories: {{this.nutrients.calories}}</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{else}}
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card text-center mx-3 mb-5 h-100">
+                <div class="card-header">
+                    Today
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Meals</h5>
+                    <ul class="list-group list-group-flush">
+                        {{#each mealPlannerResult.meals}}
+                        <li class="list-group-item">
+                            <a href="/recipe-details/{{id}}">{{this.title}}</a>
+                            <p>Ready in: {{this.readyInMinutes}} minutes</p>
+                            <p>Servings: {{this.servings}}</p>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    <p>Total Calories: {{mealPlannerResult.nutrients.calories}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</div>

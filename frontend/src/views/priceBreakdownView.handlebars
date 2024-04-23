@@ -1,0 +1,41 @@
+<div class="mx-5">
+    <h2 class="text-center mt-5">Ingredients</h2>
+    {{#if priceBreakdown.ingredients}}
+    <p class="text-center mb-5">You are viewing the price breakdown for the recipe you selected</p>
+    {{else}}
+    <p class="text-center mb-5">The recipe you chose is either unavailable or does not exit.</p>
+    {{/if}}
+
+    {{#if priceBreakdown.ingredients}}
+    <div class="alert alert-dark mx-4 text-center" role="alert">
+        The estimated cost of this recipe including all ingredientes listed below is
+        <strong>${{priceBreakdown.totalCost}}</strong>!
+        <hr>
+        The cost per serving is <em>${{priceBreakdown.totalCostPerServing}}</em>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {{#each priceBreakdown.ingredients}}
+        <div class="col">
+            <div class="card text-center mx-3 mb-5 h-100" style="width: 18rem;">
+                <div class="card-header">
+                    Ingredient #{{@index}}
+                </div>
+                <img src="{{image}}" class="card-img-top" alt="..." style="height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title text-capitalize">{{name}}</h5>
+                    {{#if amount.us.unit}}
+                    <p class="card-text">{{amount.us.value}} <span class="text-capitalize">{{amount.us.unit}}</span></p>
+                    {{else}}
+                    <p class="card-text">{{amount.us.value}} Unit(s)</p>
+                    {{/if}}
+                </div>
+                <div class="card-footer text-body-secondary">
+                    ${{price}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>

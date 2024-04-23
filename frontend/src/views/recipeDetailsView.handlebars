@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <div class="row">
+        <h1> Recipe Details</h1>
+
+        <div class="col-md-6">
+            <img src="{{ results.image }}" alt="{{ title }}" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h2>{{ results.title }}</h2>
+            <p><strong>Servings:</strong> {{ results.servings }}</p>
+            <p><strong>Ready in Minutes:</strong> {{ results.readyInMinutes }}</p>
+            <p><strong>Dish Types:</strong> {{ results.dishTypes }}</p>
+            <a href="/taste/{{id}}" class="btn btn-primary mt-3">Check taste details</a> </br>
+            <a href="/price-breakdown/{{id}}" class="btn btn-primary mt-3">Check price breakdown</a>
+
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h3>Ingredients</h3>
+            <ul class="list-group">
+                {{#each results.extendedIngredients}}
+                <li class="list-group-item">
+                    <strong>{{ name }}</strong> - {{ measures.us.amount }} {{ measures.us.unitShort }}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h3>Summary</h3>
+            <p>{{{ results.summary }}}</p>
+
+        </div>
+    </div>
+</div>

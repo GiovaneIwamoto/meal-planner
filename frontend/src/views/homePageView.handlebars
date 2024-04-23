@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <h2 class="text-center">Meal Planner</h2>
+    <form action="/meal-plan" method="get">
+        <div class="mb-3">
+            <label for="timeFrame" class="form-label">Time Frame</label>
+            <select class="form-select" id="timeFrame" name="timeFrame" required>
+                <option value="day">Day</option>
+                <option value="week">Week</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="targetCalories" class="form-label">Target Calories</label>
+            <input type="number" class="form-control" id="targetCalories" name="targetCalories" min="0" placeholder="Enter target calories">
+        </div>
+        <div class="mb-3">
+            <label for="diet" class="form-label">Diet</label>
+            <select class="form-select" id="diet" name="diet">
+                <option value="">None</option>
+                <option value="omnivore">Omnivore</option>
+                <option value="pescetarian">Pescetarian</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="ovo-vegetarian">Ovo-Vegetarian</option>
+                <option value="lacto-vegetarian">Lacto-Vegetarian</option>
+                <option value="vegan">Vegan</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Generate Meal Plan</button>
+    </form>
+</div>
