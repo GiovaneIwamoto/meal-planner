@@ -130,5 +130,3 @@ dist
 .pnp.*
 
 # Docker
-docker-compose.yml
-docker-production.yml
