@@ -1,0 +1,28 @@
+version: '3'
+services:
+  frontend:
+    platform: linux/amd64
+    container_name: frontend
+    build: ./frontend/
+    image: #YOUR ECR IMAGE HERE
+    ports:
+      - "80:4000"
+    networks:
+      - #YOU NETWORK NAME HERE
+    env_file:
+      - .env
+    command: node app.js
+  backend:
+    platform: linux/amd64
+    container_name: backend
+    build: ./backend/
+    image: #YOUR ECR IMAGE HERE
+    ports:
+      - "3000:3000"
+    networks:
+      - #YOUR NETWORK NAME HERE
+    env_file:
+      - .env
+    command: node server.js
+networks:
+  #YOUR NETWORK NAME HERE:
