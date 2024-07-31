@@ -8,6 +8,10 @@ This project aims to develop the _Meal Planner_, an application designed to simp
 
 ---
 
+https://github.com/user-attachments/assets/32ee41b9-d647-487b-b7de-52a710db2518
+
+---
+
 ### **MAIN FEATURES**
 
 - **Customization**: The application allows for the adjustment of meal plans, which can be weekly or daily, adopting any specific diet such as Omnivore, Pescetarian, Vegetarian, Ovo-Vegetarian, Lacto-Vegetarian, or Vegan, in addition to the possibility of limiting the number of daily calories.
