@@ -2,9 +2,9 @@
 
 ### **OVERVIEW**
 
-This project aims to develop the _Meal Planner_, an application designed to simplify and personalize meal planning, providing a customized meal plan based on dietary preferences and nutritional goals, enabling an easier path to eating tailored to your objectives. The application has been designed for cloud deployment, utilizing _Docker_ for containerization, _AWS EC2_ to provide scalable and on-demand computational power, and _Amazon ECR_ for storing and managing _Docker_ images. This ensures optimized, scalable, and reliable performance in the cloud.
+This project aims to develop the Meal Planner, an application designed to simplify and personalize meal planning, providing a customized meal plan based on dietary preferences and nutritional goals, enabling an easier path to eating tailored to your objectives. The application has been designed for cloud deployment, utilizing Docker for containerization, AWS EC2 to provide scalable and on-demand computational power, and Amazon ECR for storing and managing Docker images. This ensures optimized, scalable, and reliable performance in the cloud.
 
-[![Icons](https://skillicons.dev/icons?i=aws,nodejs,docker,js&theme=dark)](https://skillicons.dev)
+[![Icons](https://skillicons.dev/icons?i=aws,nodejs,docker,js,html,css&theme=dark)](https://skillicons.dev)
 
 ---
 
@@ -22,6 +22,9 @@ https://github.com/user-attachments/assets/368e3e3c-d728-4b5c-aa65-d11a836b1a8d
 
 - **Cloud Integration**: The combination used offers an efficient application through on-demand computing from AWS EC2, a secure repository for Docker image manipulation with AWS ECR, and encapsulation in containers provided by Docker, ensuring more agility and ease in the execution and testing of the system.
 
+> [!WARNING]
+> It is imperative for users to deploy their own application on AWS using their own credentials to ensure compliance and security. This ensures that users have full control over their application's environment and data, facilitating customization and enhancing security measures.
+
 ---
 
 ### **ARCHITECTURE**
@@ -30,40 +33,37 @@ https://github.com/user-attachments/assets/368e3e3c-d728-4b5c-aa65-d11a836b1a8d
 
 ### **BACKEND ENDPOINTS**
 
-| **HTTP VERB** | **ENDPOINT**                   | **ACTION**               |
-| ------------- | ------------------------------ | ------------------------ |
-| GET           | `/meal-plan/`                  | Generate meal plan       |
-| GET           | `/price-breakdown/{recipe_id}` | Get price of ingredients |
-| GET           | `/recipe-details/{recipe_id}`  | Get recipe details       |
-| GET           | `/taste/{recipe_id}`           | Get flavor information   |
+| **HTTP VERB** | **ENDPOINT**                 | **ACTION**               |
+| ------------- | ---------------------------- | ------------------------ |
+| GET           | /meal-plan/                  | Generate meal plan       |
+| GET           | /price-breakdown/{recipe_id} | Get price of ingredients |
+| GET           | /recipe-details/{recipe_id}  | Get recipe details       |
+| GET           | /taste/{recipe_id}           | Get flavor information   |
 
 ---
 
 ### **TECHNOLOGIES USED**
 
 ```ruby
-| Node - Runtime environment for JS applications on a server | Axios - A versatile library for HTTP requests
-| Dotenv - Essential module for loading environment variables| Nodemon - Automatic restart of Node application
-| AWS EC2 - Cloud computing service for hosting applications | AWS ECR - Storing Docker container images
-| Handlebars - Template engine for rendering views on server | Bootstrap - CSS framework for styling web pages
-| Docker - Developing, shipping, and running in containers   | Spoonacular - Recipes and nutrition external API
+Node - Runtime environment for JS applications on a server | Axios - A versatile library for HTTP requests
+Dotenv - Essential module for loading environment variables| Nodemon - Automatic restart of Node application
+AWS EC2 - Cloud computing service for hosting applications | AWS ECR - Storing Docker container images
+Handlebars - Template engine for rendering views on server | Bootstrap - CSS framework for styling web pages
+Docker - Developing, shipping, and running in containers   | Spoonacular - Recipes and nutrition external API
 ```
 
 ---
 
 ### **INSTALLATION GUIDE**
 
-> Clone this repository
-
-```ruby
-https://github.com/GiovaneIwamoto/meal-planner
-```
-
-> Create env file and run docker
+> RUN DOCKER COMPOSE
 
 ```ruby
 $ docker compose -f docker-production.yml up
 ```
+
+> [!CAUTION]
+> Credentials should remain local to your environment only. Never expose your credentials in any part of the code, such as in source files, comments, or commit history. Instead, use environment variables or secure secret management tools to manage and access your credentials securely.
 
 ---
 
