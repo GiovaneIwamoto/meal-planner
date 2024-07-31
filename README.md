@@ -2,7 +2,7 @@
 
 ### **OVERVIEW**
 
-This project aims to develop the Meal Planner, an application designed to simplify and personalize meal planning, providing a customized meal plan based on dietary preferences and nutritional goals, enabling an easier path to eating tailored to your objectives. The application has been designed for cloud deployment, utilizing Docker for containerization, AWS EC2 to provide scalable and on-demand computational power, and Amazon ECR for storing and managing Docker images. This ensures optimized, scalable, and reliable performance in the cloud.
+This project aims to develop the Meal Planner an application designed to simplify and personalize meal planning, providing a customized meal plan based on dietary preferences and nutritional goals, enabling an easier path to eating tailored to your objectives. The application has been designed for cloud deployment, utilizing Docker for containerization, AWS EC2 to provide scalable and on-demand computational power, and Amazon ECR for storing and managing Docker images. This ensures optimized, scalable, and reliable performance in the cloud.
 
 [![Icons](https://skillicons.dev/icons?i=aws,nodejs,docker,js,html,css&theme=dark)](https://skillicons.dev)
 
@@ -33,12 +33,12 @@ https://github.com/user-attachments/assets/368e3e3c-d728-4b5c-aa65-d11a836b1a8d
 
 ### **BACKEND ENDPOINTS**
 
-| **HTTP VERB** | **ENDPOINT**                 | **ACTION**               |
-| ------------- | ---------------------------- | ------------------------ |
-| GET           | /meal-plan/                  | Generate meal plan       |
-| GET           | /price-breakdown/{recipe_id} | Get price of ingredients |
-| GET           | /recipe-details/{recipe_id}  | Get recipe details       |
-| GET           | /taste/{recipe_id}           | Get flavor information   |
+| **HTTP VERB** | **ENDPOINT**                   | **ACTION**               |
+| ------------- | ------------------------------ | ------------------------ |
+| GET           | `/meal-plan/`                  | Generate meal plan       |
+| GET           | `/price-breakdown/{recipe_id}` | Get price of ingredients |
+| GET           | `/recipe-details/{recipe_id}`  | Get recipe details       |
+| GET           | `/taste/{recipe_id}`           | Get flavor information   |
 
 ---
 
@@ -49,7 +49,7 @@ Node - Runtime environment for JS applications on a server | Axios - A versatile
 Dotenv - Essential module for loading environment variables| Nodemon - Automatic restart of Node application
 AWS EC2 - Cloud computing service for hosting applications | AWS ECR - Storing Docker container images
 Handlebars - Template engine for rendering views on server | Bootstrap - CSS framework for styling web pages
-Docker - Developing, shipping, and running in containers   | Spoonacular - Recipes and nutrition external API
+Docker - Developing shipping and running in containers     | Spoonacular - Recipes and nutrition external API
 ```
 
 ---
