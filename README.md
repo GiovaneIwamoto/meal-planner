@@ -4,7 +4,7 @@
 
 This project aims to develop the Meal Planner an application designed to simplify and personalize meal planning, providing a customized meal plan based on dietary preferences and nutritional goals, enabling an easier path to eating tailored to your objectives. The application has been designed for cloud deployment, utilizing Docker for containerization, AWS EC2 to provide scalable and on-demand computational power, and Amazon ECR for storing and managing Docker images. This ensures optimized, scalable, and reliable performance in the cloud.
 
-[![Icons](https://skillicons.dev/icons?i=aws,nodejs,docker,js,html,css&theme=dark)](https://skillicons.dev)
+[![Icons](https://skillicons.dev/icons?i=aws,nodejs,docker,js,bootstrap,html,css&theme=dark)](https://skillicons.dev)
 
 ---
 
