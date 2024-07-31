@@ -8,7 +8,7 @@ This project aims to develop the _Meal Planner_, an application designed to simp
 
 ---
 
-https://github.com/user-attachments/assets/32ee41b9-d647-487b-b7de-52a710db2518
+https://github.com/user-attachments/assets/368e3e3c-d728-4b5c-aa65-d11a836b1a8d
 
 ---
 
