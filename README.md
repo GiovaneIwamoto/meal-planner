@@ -42,18 +42,6 @@ https://github.com/user-attachments/assets/368e3e3c-d728-4b5c-aa65-d11a836b1a8d
 
 ---
 
-### **TECHNOLOGIES USED**
-
-```ruby
-Node - Runtime environment for JS applications on a server | Axios - A versatile library for HTTP requests
-Dotenv - Essential module for loading environment variables| Nodemon - Automatic restart of Node application
-AWS EC2 - Cloud computing service for hosting applications | AWS ECR - Storing Docker container images
-Handlebars - Template engine for rendering views on server | Bootstrap - CSS framework for styling web pages
-Docker - Developing shipping and running in containers     | Spoonacular - Recipes and nutrition external API
-```
-
----
-
 ### **INSTALLATION GUIDE**
 
 > RUN DOCKER COMPOSE
